@@ -1,0 +1,16 @@
+<% if current_user %>
+			Welcome <b style="color: #38761d;"><%= current_user.email || current_user.email %></b>&nbsp;|&nbsp;
+			<%= link_to "Sign Out", destroy_user_session_path, :method=>:delete %>
+		<% else %>
+			<%= link_to "Sign In", new_user_session_path(current_user) %>&nbsp;|&nbsp;
+			<%= link_to "Register", new_user_registration_path(current_user) %>
+		<% end %>
+<%for place in @place%>	
+	<tr><td><%=count%></td>
+		<td><%=place["formatted_address"]%></td>
+		<td><%=place["geometry"]["location"]["lat"]%></td>
+		<td><%=place["geometry"]["location"]["lng"]%></td>
+		<td><%=place["name"]%></td>
+	</tr>
+	<%count +=1%>
+	<%end%>

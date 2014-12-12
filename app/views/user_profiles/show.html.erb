@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+
+<%= link_to 'Edit', edit_user_profile_path(@user_profile) %> |
+<%= link_to 'Back', user_profiles_path %>
+
+
+<!--
+<table border="1px" cellspacing="0" cellpadding="0" align="center" width="550px">
+	<tr><th><%="SNo."%></th>
+		<th><%="formatted_address"%></th>
+		<th><%="Location_Lat"%></th>
+		<th><%="Location_Lan"%></th>
+		<th><%="name"%></th>
+	</tr><%count =1%>
+	<%for place in @place%>	
+	<tr><td><%=count%></td>
+		<td><%=place["formatted_address"]%></td>
+		<td><%=place["geometry"]["location"]["lat"]%></td>
+		<td><%=place["geometry"]["location"]["lng"]%></td>
+		<td><%=place["name"]%></td>
+	</tr>
+	<%count +=1%>
+	<%end%>
+</table>-->
